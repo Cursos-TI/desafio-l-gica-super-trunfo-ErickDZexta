@@ -65,11 +65,63 @@ int main() {
    printf("Insira a Area por KM de PR:\n");
    scanf("%f", &area2);
 
-   if (populacao1 > populacao2){
-        printf("Carta 1 ganhou da Carta 2 em População!");
-   }else {
-        printf("Carta 2 ganhou da Carta 1 em população!");
-   }
+    // Menu de escolha
+    
+    int opcao;
+    printf("\n--- MENU DE COMPARAÇÃO ---\n");
+    printf("1. População\n");
+    printf("2. Pontos turísticos\n");
+    printf("3. PIB per capita\n");
+    printf("4. Área territorial\n");
+    printf("Escolha uma opção para comparar: ");
+    scanf("%d", &opcao);
+
+    printf("\n== Resultado da Comparação ==\n");
+
+    switch (opcao) {
+        case 1:
+            if (populacao1 > populacao2)
+                printf("Carta 1 (MG) venceu em população!\n");
+            else if (populacao2 > populacao1)
+                printf("Carta 2 (PR) venceu em população!\n");
+            else
+                printf("Empate em população!\n");
+            break;
+
+        case 2:
+            if (numeroDePontos1 > numeroDePontos2)
+                printf("Carta 1 (MG) venceu em pontos turísticos!\n");
+            else if (numeroDePontos2 > numeroDePontos1)
+                printf("Carta 2 (PR) venceu em pontos turísticos!\n");
+            else
+                printf("Empate em pontos turísticos!\n");
+            break;
+
+        case 3:
+            if (pib1 > pib2)
+                printf("Carta 1 (MG) venceu em PIB per capita!\n");
+            else if (pib2 > pib1)
+                printf("Carta 2 (PR) venceu em PIB per capita!\n");
+            else
+                printf("Empate em PIB per capita!\n");
+            break;
+
+        case 4:
+            if (area1 > area2)
+                printf("Carta 1 (MG) venceu em área territorial!\n");
+            else if (area2 > area1)
+                printf("Carta 2 (PR) venceu em área territorial!\n");
+            else
+                printf("Empate em área territorial!\n");
+            break;
+
+        default:
+            printf("Opção inválida! Tente novamente.\n");
+            break;
+    }
+
+   
+ 
 
     
 
